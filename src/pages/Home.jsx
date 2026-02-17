@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
 const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663026701779/wGgrpBOKZUgnkwRw.png";
 
 function Home() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState('');
@@ -28,8 +30,8 @@ function Home() {
       const data = await response.json();
       
       if (data.success) {
-        setMessage('Success! Check your email for the first chapter.');
-        setEmail('');
+        // Redirect to thank you page
+        navigate('/thank-you');
       } else {
         setMessage(data.message || 'Something went wrong. Please try again.');
       }

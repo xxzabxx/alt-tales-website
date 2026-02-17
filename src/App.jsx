@@ -5,6 +5,7 @@ import Series from './pages/Series';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Music from './pages/Music';
+import ThankYou from './pages/ThankYou';
 import './App.css';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/music" element={<Music />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
 
         <footer className="footer">
