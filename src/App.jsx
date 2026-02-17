@@ -3,6 +3,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Series from './pages/Series';
 import Contact from './pages/Contact';
+import FAQ from './pages/FAQ';
+import Music from './pages/Music';
 import './App.css';
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/series">Series</Link>
+              <Link to="/music">Music</Link>
+              <Link to="/faq">FAQ</Link>
               <Link to="/contact">Contact</Link>
             </div>
           </div>
@@ -25,6 +29,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/series" element={<Series />} />
+          <Route path="/music" element={<Music />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
 

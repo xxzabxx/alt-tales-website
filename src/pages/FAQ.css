@@ -1,0 +1,157 @@
+.faq {
+  flex: 1;
+}
+
+.faq-hero {
+  background: linear-gradient(135deg, #0A1628 0%, #050C13 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.faq-hero h1 {
+  font-size: 3rem;
+  color: #10B981;
+  margin-bottom: 1rem;
+}
+
+.faq-hero p {
+  font-size: 1.1rem;
+  color: #D1D5DB;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.faq-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.faq-section {
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: #0A1628;
+  border-radius: 8px;
+  border: 1px solid #1F2937;
+}
+
+.faq-section h2 {
+  color: #D4AF37;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.faq-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #1F2937;
+  padding-bottom: 1rem;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background: none;
+  border: none;
+  color: #10B981;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: #34D399;
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #10B981;
+  min-width: 30px;
+  text-align: center;
+}
+
+.faq-answer {
+  padding: 1rem 0;
+  color: #D1D5DB;
+  line-height: 1.8;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faq-cta {
+  margin-top: 4rem;
+  padding: 3rem;
+  background-color: #0A1628;
+  border-radius: 8px;
+  border: 1px solid #D4AF37;
+  text-align: center;
+}
+
+.faq-cta h3 {
+  color: #D4AF37;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.faq-cta p {
+  color: #D1D5DB;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.8;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #10B981;
+  color: #050C13;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #34D399;
+}
+
+@media (max-width: 768px) {
+  .faq-hero h1 {
+    font-size: 2rem;
+  }
+
+  .faq-section {
+    padding: 1.5rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+}

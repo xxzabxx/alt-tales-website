@@ -1,0 +1,264 @@
+.music {
+  flex: 1;
+}
+
+.music-hero {
+  background: linear-gradient(135deg, #0A1628 0%, #050C13 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.music-hero h1 {
+  font-size: 3rem;
+  color: #10B981;
+  margin-bottom: 1rem;
+}
+
+.music-hero p {
+  font-size: 1.1rem;
+  color: #D1D5DB;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.music-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.music-player {
+  background-color: #0A1628;
+  padding: 3rem;
+  border-radius: 8px;
+  border: 1px solid #1F2937;
+  margin-bottom: 3rem;
+}
+
+.track-info {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.track-info h3 {
+  font-size: 1.75rem;
+  color: #10B981;
+  margin-bottom: 0.5rem;
+}
+
+.track-info p {
+  color: #9CA3AF;
+  font-size: 1rem;
+}
+
+.progress-section {
+  margin-bottom: 2rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #1F2937;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #10B981;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.progress-bar::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: #10B981;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: #9CA3AF;
+  font-size: 0.9rem;
+}
+
+.player-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.control-btn {
+  background: none;
+  border: none;
+  color: #10B981;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding: 0.5rem;
+}
+
+.control-btn:hover:not(:disabled) {
+  color: #34D399;
+}
+
+.control-btn:disabled {
+  color: #374151;
+  cursor: not-allowed;
+}
+
+.play-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #10B981;
+  border: none;
+  color: #050C13;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-btn:hover {
+  background-color: #34D399;
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.volume-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.volume-slider {
+  flex: 1;
+  height: 4px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #1F2937;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: #10B981;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #10B981;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.track-list {
+  border-top: 1px solid #1F2937;
+  padding-top: 1.5rem;
+}
+
+.track-list h4 {
+  color: #9CA3AF;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.track-item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: #9CA3AF;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.track-item:hover {
+  background-color: #1F2937;
+  color: #E5E7EB;
+}
+
+.track-item.active {
+  background-color: rgba(16, 185, 129, 0.2);
+  color: #10B981;
+}
+
+.music-description {
+  padding: 2rem;
+  background-color: #0A1628;
+  border-radius: 8px;
+  border: 1px solid #1F2937;
+}
+
+.music-description h2 {
+  color: #D4AF37;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.music-description p {
+  color: #D1D5DB;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 768px) {
+  .music-hero h1 {
+    font-size: 2rem;
+  }
+
+  .music-player {
+    padding: 2rem;
+  }
+
+  .player-controls {
+    gap: 1rem;
+  }
+
+  .play-btn {
+    width: 50px;
+    height: 50px;
+  }
+}
