@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { Resend } from 'resend';
 
 export const handler = async (event) => {
   // Only allow POST
@@ -19,31 +20,44 @@ export const handler = async (event) => {
       };
     }
 
-    // Initialize Supabase client
+    // Initialize Resend client
+    const resend = new Resend(process.env.RESEND_API_KEY);
+
+    // Send email notification
+    const emailResult = await resend.emails.send({
+      from: 'Alt Tales Contact Form <onboarding@resend.dev>',
+      to: 'theshadowindexbook@gmail.com',
+      subject: `New Contact Form Message from ${name}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+      `
+    });
+
+    if (emailResult.error) {
+      console.error('Resend error:', emailResult.error);
+      throw new Error('Failed to send email');
+    }
+
+    // Also save to Supabase database
     const supabase = createClient(
       process.env.SUPABASE_URL,
       process.env.SUPABASE_ANON_KEY
     );
 
-    // Insert contact message into users table (or create a contacts table)
-    const { data, error } = await supabase
+    await supabase
       .from('users')
       .insert([
         {
           name,
           email,
-          open_id: `contact_${Date.now()}`, // Generate unique ID
+          open_id: `contact_${Date.now()}`,
           created_at: new Date().toISOString()
         }
-      ])
-      .select();
-
-    if (error) {
-      throw error;
-    }
-
-    // TODO: Send email notification to theshadowindexbook@gmail.com
-    // You can use a service like SendGrid, Mailgun, or Resend here
+      ]);
 
     return {
       statusCode: 200,
