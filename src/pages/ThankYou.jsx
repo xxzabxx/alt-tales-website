@@ -1,6 +1,6 @@
 import './ThankYou.css';
 
-const PDF_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663026701779/gWUnnOkAYHNmWAZg.pdf";
+const PDF_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663026701779/mAOaasWTEYdLPzOk.pdf";
 
 function ThankYou() {
   return (
