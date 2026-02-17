@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './Home.css';
 
-const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663026701779/GzeOphLbPuPKvxXu.png";
+const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663026701779/wGgrpBOKZUgnkwRw.png";
 
 function Home() {
   const [email, setEmail] = useState('');
