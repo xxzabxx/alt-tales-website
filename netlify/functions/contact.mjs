@@ -25,7 +25,7 @@ export const handler = async (event) => {
 
     // Send email notification
     const emailResult = await resend.emails.send({
-      from: 'Alt Tales Contact Form <onboarding@resend.dev>',
+      from: 'Alt Tales Contact Form <noreply@alt-tales.com>',
       to: 'theshadowindexbook@gmail.com',
       subject: `New Contact Form Message from ${name}`,
       html: `
