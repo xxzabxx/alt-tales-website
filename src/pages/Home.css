@@ -36,6 +36,14 @@
   z-index: 1;
 }
 
+.hero-logo {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.3));
+}
+
 .hero-text h1 {
   font-size: 3rem;
   color: #10B981;

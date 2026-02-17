@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './Home.css';
 
+const LOGO_URL = "https://files.manuscdn.com/user_upload_by_module/session_file/310419663026701779/GzeOphLbPuPKvxXu.png";
+
 function Home() {
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
@@ -43,6 +45,7 @@ function Home() {
       <section className="hero">
         <div className="hero-content">
           <div className="hero-text">
+            <img src={LOGO_URL} alt="Alt Tales Logo" className="hero-logo" />
             <h1>The Shadow Index</h1>
             <p className="author">by RJ Stenson</p>
             <p className="tagline">
