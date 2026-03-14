@@ -2,32 +2,221 @@
   flex: 1;
 }
 
+/* Hero */
 .about-hero {
   background: linear-gradient(135deg, #0A1628 0%, #050C13 100%);
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 3rem;
   text-align: center;
+  border-bottom: 1px solid #1F2937;
 }
 
 .about-hero h1 {
   font-size: 3rem;
   color: #10B981;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 0 auto 0.5rem;
 }
 
+.about-hero-sub {
+  font-size: 0.9rem;
+  color: #6B7280;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Content wrapper */
 .about-content {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
 
+/* Bio text */
+.about-text {
+  margin-bottom: 3.5rem;
+}
+
 .about-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  margin-bottom: 1.4rem;
   color: #D1D5DB;
 }
 
+.about-text strong {
+  color: #E5E7EB;
+}
+
+.about-personal {
+  color: #9CA3AF !important;
+  font-style: italic;
+}
+
+/* Current Projects */
+.about-books {
+  margin-bottom: 3.5rem;
+}
+
+.about-books h2 {
+  font-size: 1.6rem;
+  color: #D4AF37;
+  margin-bottom: 1.25rem;
+}
+
+.about-book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-book-item {
+  display: flex;
+  align-items: stretch;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid #1F2937;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+
+.about-book-item--shadow:hover {
+  border-color: #10B981;
+}
+
+.about-book-item--grimm:hover {
+  border-color: #D97706;
+}
+
+.about-book-accent {
+  width: 5px;
+  flex-shrink: 0;
+}
+
+.about-book-item--shadow .about-book-accent {
+  background: #10B981;
+}
+
+.about-book-item--grimm .about-book-accent {
+  background: #D97706;
+}
+
+.about-book-details {
+  padding: 1.25rem 1.5rem;
+  flex: 1;
+}
+
+.about-book-genre {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6B7280;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.about-book-item--shadow .about-book-genre {
+  color: #10B981;
+}
+
+.about-book-item--grimm .about-book-genre {
+  color: #D97706;
+}
+
+.about-book-details h3 {
+  font-size: 1.25rem;
+  color: #E5E7EB;
+  margin-bottom: 0.2rem;
+}
+
+.about-book-details p {
+  font-size: 0.85rem;
+  color: #6B7280;
+  margin-bottom: 0.2rem;
+}
+
+.about-book-status {
+  font-size: 0.8rem !important;
+  color: #D4AF37 !important;
+  font-style: italic;
+  margin-bottom: 0.75rem !important;
+}
+
+.about-book-link {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #9CA3AF;
+  transition: color 0.2s;
+}
+
+.about-book-item--shadow .about-book-link:hover {
+  color: #10B981;
+}
+
+.about-book-item--grimm .about-book-link:hover {
+  color: #D97706;
+}
+
+/* Connect section */
+.about-connect {
+  padding: 2.5rem;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid #1F2937;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.about-connect h2 {
+  font-size: 1.6rem;
+  color: #D4AF37;
+  margin-bottom: 0.75rem;
+}
+
+.about-connect p {
+  color: #9CA3AF;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.about-connect-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.about-social-btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background-color: #D97706;
+  color: #0D0804;
+  font-weight: 700;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.about-social-btn:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+}
+
+.about-social-btn--outline {
+  background: transparent;
+  border: 1px solid #374151;
+  color: #D1D5DB;
+}
+
+.about-social-btn--outline:hover {
+  border-color: #D4AF37;
+  color: #D4AF37;
+  filter: none;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .about-hero h1 {
     font-size: 2rem;
@@ -35,5 +224,9 @@
 
   .about-text p {
     font-size: 1rem;
+  }
+
+  .about-connect {
+    padding: 1.75rem 1.25rem;
   }
 }

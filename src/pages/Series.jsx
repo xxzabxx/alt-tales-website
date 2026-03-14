@@ -103,6 +103,21 @@ function Series() {
                 <span className="detail-value">Coming Soon &middot; Seeking Agent Representation</span>
               </div>
             </div>
+
+            <div className="grimm-comp-titles">
+              <p className="comp-titles-label">Comp Titles</p>
+              <ul className="comp-titles-list">
+                <li><strong>The Will of the Many</strong> <span>(James Islington)</span> &mdash; high stakes selection &amp; competition energy</li>
+                <li><strong>Witch King</strong> <span>(Martha Wells)</span> &mdash; conspiracy plus &ldquo;why is the world like this&rdquo; under pressure</li>
+                <li><strong>Dungeon Crawler Carl</strong> <span>(Matt Dinniman)</span> &mdash; brutal survival and dark, reactive humor</li>
+                <li><strong>Red Rising</strong> <span>(Pierce Brown)</span> &mdash; escalating stakes and competitive pressure</li>
+              </ul>
+            </div>
+
+            <div className="grimm-pitch">
+              <p>If you like survival fantasy with a modern edge, this is for you. <em>The Grimm Forge</em> hits the sweet spot between a deadly competition and a siege story, with a pragmatic lead, dark humor under pressure, and a mystery that keeps tightening the screws. It&rsquo;s LitRPG-adjacent in energy, but more grounded and character-first.</p>
+            </div>
+
             <div className="book-ctas">
               <a href="/thank-you-grimm" className="btn btn--primary btn--grimm">Get the Prologue Free</a>
             </div>
