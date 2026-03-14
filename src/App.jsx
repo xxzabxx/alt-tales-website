@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Music from './pages/Music';
 import ThankYou from './pages/ThankYou';
+import ThankYouGrimm from './pages/ThankYouGrimm';
 import './App.css';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
             <div className="nav-links">
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
-              <Link to="/series">Series</Link>
+              <Link to="/series">Books</Link>
               <Link to="/music">Music</Link>
               <Link to="/faq">FAQ</Link>
               <Link to="/contact">Contact</Link>
@@ -34,26 +35,30 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/thank-you" element={<ThankYou />} />
+          <Route path="/thank-you-grimm" element={<ThankYouGrimm />} />
         </Routes>
 
         <footer className="footer">
           <div className="footer-container">
             <div className="footer-section">
               <h3>Alt Tales</h3>
-              <p>Dark academia urban fantasy by RJ Stenson. Where magic flows through sound and music becomes a weapon.</p>
+              <p>Two worlds. Two stories. One author. Dark fantasy by RJ Stenson — currently seeking agent representation for traditional publishing.</p>
             </div>
             <div className="footer-section">
               <h4>Quick Links</h4>
               <Link to="/about">About the Author</Link>
-              <Link to="/series">Book Series</Link>
+              <Link to="/series">The Books</Link>
+              <Link to="/faq">FAQ</Link>
+              <Link to="/music">Resonance Sessions</Link>
               <Link to="/contact">Contact</Link>
             </div>
             <div className="footer-section">
               <h4>Connect</h4>
-              <a href="https://www.tiktok.com/@The.Shadow.index" target="_blank" rel="noopener noreferrer">
-                @The.Shadow.index
+              <a href="https://www.tiktok.com/@alt_tales_books" target="_blank" rel="noopener noreferrer">
+                @Alt_Tales_Books on TikTok
               </a>
               <p className="footer-note">Follow for behind-the-scenes content, resonance sessions, and book updates.</p>
+              <p className="footer-agent-note">Currently seeking agent representation for traditional publishing.</p>
             </div>
           </div>
           <div className="footer-bottom">
