@@ -22,6 +22,83 @@
   line-height: 1.8;
 }
 
+/* Book selector tabs */
+.faq-book-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 2rem 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-tab {
+  padding: 0.75rem 2rem;
+  background: transparent;
+  border: 2px solid #1F2937;
+  border-radius: 4px;
+  color: #9CA3AF;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 0.05em;
+}
+
+.faq-tab:hover {
+  border-color: #6B7280;
+  color: #D1D5DB;
+}
+
+.faq-tab--active.faq-tab--shadow {
+  border-color: #10B981;
+  color: #10B981;
+  background: rgba(16, 185, 129, 0.08);
+}
+
+.faq-tab--active.faq-tab--grimm {
+  border-color: #D97706;
+  color: #D97706;
+  background: rgba(217, 119, 6, 0.08);
+}
+
+/* Grimm Forge color variants */
+.faq-question--grimm {
+  color: #D97706;
+}
+
+.faq-question--grimm:hover {
+  color: #F59E0B;
+}
+
+.faq-question--grimm .faq-icon {
+  color: #D97706;
+}
+
+.faq-answer--grimm {
+  border-left: 2px solid rgba(217, 119, 6, 0.3);
+  padding-left: 1rem;
+}
+
+.faq-cta--grimm {
+  border-color: #D97706;
+}
+
+.faq-cta--grimm h3 {
+  color: #D97706;
+}
+
+@media (max-width: 600px) {
+  .faq-book-tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .faq-tab {
+    text-align: center;
+  }
+}
+
 .faq-content {
   max-width: 900px;
   margin: 0 auto;
