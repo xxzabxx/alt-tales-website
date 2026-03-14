@@ -72,25 +72,19 @@ function Home() {
     setLoading(true);
     setMessage('');
 
+    // Fire and forget — always redirect regardless of outcome
     try {
-      const response = await fetch('/.netlify/functions/subscribe', {
+      await fetch('/.netlify/functions/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, source: book.ctaSource }),
       });
-
-      const data = await response.json();
-
-      if (data.success) {
-        navigate(book.thankYouPath);
-      } else {
-        setMessage(data.message || 'Something went wrong. Please try again.');
-      }
     } catch {
-      setMessage('Failed to subscribe. Please try again.');
-    } finally {
-      setLoading(false);
+      // Silently ignore errors — user still gets the content
     }
+
+    // Always redirect to the thank-you/download page
+    navigate(book.thankYouPath);
   };
 
   return (
