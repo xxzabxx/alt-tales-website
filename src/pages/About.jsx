@@ -26,7 +26,7 @@ function About() {
             His second project, <strong>The Grimm Forge</strong>, takes a sharp turn into survival dark fantasy.
             When a group of contestants on a televised medieval competition wake up in a world that shouldn't
             exist, the rules disappear and the stakes become permanent. It's a siege story wrapped in a
-            portal fantasy. Brutal, character-driven, and relentlessly escalating.
+            LitRPG-adjacent story. Brutal, character-driven, and relentlessly escalating.
           </p>
           <p>
             Both novels exist within the Alt Tales Universe, a shared world where the line between

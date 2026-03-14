@@ -88,7 +88,7 @@ function Series() {
             <div className="book-details">
               <div className="book-detail">
                 <span className="detail-label">Genre</span>
-                <span className="detail-value">Survival Dark Fantasy / Portal Fantasy</span>
+                <span className="detail-value">Survival Dark Fantasy / LitRPG-Adjacent</span>
               </div>
               <div className="book-detail">
                 <span className="detail-label">Setting</span>
