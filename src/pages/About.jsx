@@ -12,24 +12,24 @@ function About() {
         <div className="about-text">
           <p>
             RJ Stenson is a dark fantasy author writing across two distinct but interconnected worlds.
-            His work blends grounded characters with high-stakes genre fiction &mdash; from the magic-soaked
+            His work blends grounded characters with high-stakes genre fiction, spanning from the magic-soaked
             streets of modern Boston to the blood-and-stone survival of an ancient fortress that shouldn't exist.
           </p>
           <p>
             His debut novel, <strong>The Shadow Index</strong>, is a dark academia urban fantasy set in
             present-day Boston, where magic flows through sound and music becomes a weapon. When former
             operative Oliver &ldquo;Oz&rdquo; Cross investigates a series of ritualistic murders, he uncovers
-            a conspiracy reaching into the highest levels of power &mdash; both human and otherworldly.
+            a conspiracy reaching into the highest levels of power, both human and otherworldly.
             Think noir detective fiction with a hidden magical underbelly.
           </p>
           <p>
             His second project, <strong>The Grimm Forge</strong>, takes a sharp turn into survival dark fantasy.
             When a group of contestants on a televised medieval competition wake up in a world that shouldn't
             exist, the rules disappear and the stakes become permanent. It's a siege story wrapped in a
-            portal fantasy &mdash; brutal, character-driven, and relentlessly escalating.
+            portal fantasy. Brutal, character-driven, and relentlessly escalating.
           </p>
           <p>
-            Both novels exist within the Alt Tales Universe &mdash; a shared world where the line between
+            Both novels exist within the Alt Tales Universe, a shared world where the line between
             reality and myth is thinner than anyone wants to admit, and the people caught in between rarely
             come out unchanged.
           </p>

@@ -23,7 +23,7 @@ export const handler = async (event) => {
     let dbMessage = '';
     let isAlreadySubscribed = false;
 
-    // Try to save to Supabase (best effort — don't block on failure)
+    // Try to save to Supabase (best effort, don't block on failure)
     try {
       const supabase = createClient(
         process.env.SUPABASE_URL,
@@ -64,7 +64,7 @@ export const handler = async (event) => {
       await resend.emails.send({
         from: 'Alt Tales Signups <noreply@alt-tales.com>',
         to: 'theshadowindexbook@gmail.com',
-        subject: `New Signup: ${email} — ${bookSource}`,
+        subject: `New Signup: ${email} | ${bookSource}`,
         html: `
           <div style="font-family: Georgia, serif; max-width: 600px; margin: 0 auto; padding: 2rem; background: #0A1628; color: #D1D5DB; border-radius: 8px;">
             <h2 style="color: #10B981; margin-bottom: 0.5rem;">New Email Signup</h2>

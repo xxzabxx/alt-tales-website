@@ -42,7 +42,7 @@ function App() {
           <div className="footer-container">
             <div className="footer-section">
               <h3>Alt Tales</h3>
-              <p>Two worlds. Two stories. One author. Dark fantasy by RJ Stenson — currently seeking agent representation for traditional publishing.</p>
+              <p>Two worlds. Two stories. One author. Dark fantasy by RJ Stenson. Currently seeking agent representation for traditional publishing.</p>
             </div>
             <div className="footer-section">
               <h4>Quick Links</h4>

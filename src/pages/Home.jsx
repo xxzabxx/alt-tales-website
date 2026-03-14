@@ -72,7 +72,7 @@ function Home() {
     setLoading(true);
     setMessage('');
 
-    // Fire and forget — always redirect regardless of outcome
+    // Fire and forget : always redirect regardless of outcome
     try {
       await fetch('/.netlify/functions/subscribe', {
         method: 'POST',
@@ -80,7 +80,7 @@ function Home() {
         body: JSON.stringify({ email, source: book.ctaSource }),
       });
     } catch {
-      // Silently ignore errors — user still gets the content
+      // Silently ignore errors : user still gets the content
     }
 
     // Always redirect to the thank-you/download page

@@ -31,9 +31,9 @@ function Series() {
               <em>In rain-soaked Boston, where magic hums beneath the streets and secrets hide in plain sight, a former operative must confront the shadows of his past before they consume the city's soul.</em>
             </p>
             <div className="book-blurb">
-              <p>Oliver &ldquo;Oz&rdquo; Cross has spent years keeping the peace between two worlds &mdash; the one people can see, and the one they cannot. As a former Concordat operative, he knows how to stay invisible. How to keep the Veil intact. How to make sure the magic that flows through sound and music never spills into the wrong hands.</p>
+              <p>Oliver &ldquo;Oz&rdquo; Cross has spent years keeping the peace between two worlds. The one people can see, and the one they cannot. As a former Concordat operative, he knows how to stay invisible. How to keep the Veil intact. How to make sure the magic that flows through sound and music never spills into the wrong hands.</p>
               <p>Then a series of ritualistic murders starts unraveling everything he has worked to protect. The victims share one thing: they were all resonance users. And the killer knows exactly how to silence them.</p>
-              <p>Forced into an uneasy alliance with Elara Draegor Voss &mdash; an operative from the very faction he has spent his career opposing &mdash; Oz must navigate a conspiracy that reaches into the highest levels of power, both human and otherworldly.</p>
+              <p>Forced into an uneasy alliance with Elara Draegor Voss, an operative from the very faction he has spent his career opposing, Oz must navigate a conspiracy that reaches into the highest levels of power, both human and otherworldly.</p>
             </div>
             <div className="book-details">
               <div className="book-detail">
@@ -77,7 +77,7 @@ function Series() {
             <h2 className="book-title book-title--grimm">The Grimm Forge</h2>
             <p className="book-author">by RJ Stenson</p>
             <p className="book-pitch">
-              <em>A high stakes medieval reality show turns into a nightmare when its contestants awaken in a world warped by time and shadow, forced to kill to live as strange powers stir inside them &mdash; and the truth emerges that they may never have been meant to leave.</em>
+              <em>A high stakes medieval reality show turns into a nightmare when its contestants awaken in a world warped by time and shadow, forced to kill to live as strange powers stir inside them. The truth emerges that they may never have been meant to leave.</em>
             </p>
             <div className="book-blurb">
               <p>Peter Grimm is a man adrift, barely holding his life together when the Cirrus Corporation offers him a chance to compete in a televised medieval survival competition. A structured game. Clear rules. A payout big enough to change everything.</p>
@@ -107,10 +107,10 @@ function Series() {
             <div className="grimm-comp-titles">
               <p className="comp-titles-label">Comp Titles</p>
               <ul className="comp-titles-list">
-                <li><strong>The Will of the Many</strong> <span>(James Islington)</span> &mdash; high stakes selection &amp; competition energy</li>
-                <li><strong>Witch King</strong> <span>(Martha Wells)</span> &mdash; conspiracy plus &ldquo;why is the world like this&rdquo; under pressure</li>
-                <li><strong>Dungeon Crawler Carl</strong> <span>(Matt Dinniman)</span> &mdash; brutal survival and dark, reactive humor</li>
-                <li><strong>Red Rising</strong> <span>(Pierce Brown)</span> &mdash; escalating stakes and competitive pressure</li>
+                <li><strong>The Will of the Many</strong> <span>(James Islington)</span> &ndash; high stakes selection &amp; competition energy</li>
+                <li><strong>Witch King</strong> <span>(Martha Wells)</span> &ndash; conspiracy plus &ldquo;why is the world like this&rdquo; under pressure</li>
+                <li><strong>Dungeon Crawler Carl</strong> <span>(Matt Dinniman)</span> &ndash; brutal survival and dark, reactive humor</li>
+                <li><strong>Red Rising</strong> <span>(Pierce Brown)</span> &ndash; escalating stakes and competitive pressure</li>
               </ul>
             </div>
 
@@ -127,7 +127,7 @@ function Series() {
         {/* Narrated Prologue Video */}
         <div className="grimm-video-section">
           <h3 className="video-heading">Narrated Prologue</h3>
-          <p className="video-subheading">Hear the opening of The Grimm Forge &mdash; narrated and brought to life.</p>
+          <p className="video-subheading">Hear the opening of The Grimm Forge, narrated and brought to life.</p>
           <div className="video-wrapper">
             <video controls playsInline poster={GRIMM_COVER} className="grimm-video">
               <source src={GRIMM_VIDEO} type="video/mp4" />
@@ -147,7 +147,7 @@ function Series() {
       {/* UNIVERSE FOOTER */}
       <section className="series-universe">
         <h2>The Alt Tales Universe</h2>
-        <p>Both series exist within the same expansive universe &mdash; where magic is real, rules are fragile, and the line between worlds is thinner than anyone wants to admit.</p>
+        <p>Both series exist within the same expansive universe. Magic is real, rules are fragile, and the line between worlds is thinner than anyone wants to admit.</p>
         <div className="series-social">
           <a href="https://www.tiktok.com/@alt_tales_books" target="_blank" rel="noopener noreferrer" className="social-btn">
             TikTok: @Alt_Tales_Books
