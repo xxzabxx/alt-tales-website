@@ -28,22 +28,41 @@
   z-index: 2;
 }
 
-/* Shadow Index specific background */
-.hero--shadow {
-  background:
-    radial-gradient(ellipse at 15% 50%, rgba(16, 185, 129, 0.14) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 45%),
-    radial-gradient(ellipse at 50% 100%, rgba(16, 185, 129, 0.06) 0%, transparent 50%),
-    linear-gradient(160deg, #0D1F35 0%, #050C13 45%, #060F1A 100%);
+/* Ghosted parallax book cover background */
+.hero-bg-cover {
+  position: absolute;
+  inset: -5%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(28px) saturate(0.6) brightness(0.22);
+  transition: background-image 0.5s ease, transform 0.12s ease-out;
+  will-change: transform;
+  z-index: 0;
 }
 
-/* Grimm Forge specific background */
-.hero--grimm {
+/* Per-book atmospheric overlay on top of the ghosted cover */
+.hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-bg-overlay--shadow {
   background:
-    radial-gradient(ellipse at 15% 50%, rgba(217, 119, 6, 0.16) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 20%, rgba(180, 60, 10, 0.1) 0%, transparent 45%),
-    radial-gradient(ellipse at 50% 100%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
-    linear-gradient(160deg, #1C0E04 0%, #0D0804 45%, #120A05 100%);
+    radial-gradient(ellipse at 15% 55%, rgba(16, 185, 129, 0.22) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 100%, rgba(5, 12, 19, 0.7) 0%, transparent 60%),
+    linear-gradient(160deg, rgba(10, 22, 40, 0.82) 0%, rgba(5, 12, 19, 0.9) 60%, rgba(6, 15, 26, 0.95) 100%);
+}
+
+.hero-bg-overlay--grimm {
+  background:
+    radial-gradient(ellipse at 15% 55%, rgba(217, 119, 6, 0.25) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 20%, rgba(180, 60, 10, 0.14) 0%, transparent 45%),
+    radial-gradient(ellipse at 50% 100%, rgba(13, 8, 4, 0.7) 0%, transparent 60%),
+    linear-gradient(160deg, rgba(28, 14, 4, 0.82) 0%, rgba(13, 8, 4, 0.9) 60%, rgba(18, 10, 5, 0.95) 100%);
 }
 
 .hero--fade .hero-content {
@@ -57,6 +76,7 @@
   inset: 0;
   pointer-events: none;
   transition: opacity 0.6s ease;
+  z-index: 2;
 }
 
 /* Decorative corner ornaments */
@@ -78,7 +98,7 @@
   gap: 5rem;
   align-items: center;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   transition: opacity 0.35s ease, transform 0.35s ease;
   width: 100%;
 }

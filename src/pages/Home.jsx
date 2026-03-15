@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Home.css';
 
@@ -47,6 +47,18 @@ function Home() {
   const [message, setMessage] = useState('');
 
   const book = BOOKS[activeIndex];
+  const heroRef = useRef(null);
+  const [mousePos, setMousePos] = useState({ x: 0.5, y: 0.5 });
+
+  // Parallax mouse tracking
+  const handleMouseMove = useCallback((e) => {
+    if (!heroRef.current) return;
+    const rect = heroRef.current.getBoundingClientRect();
+    setMousePos({
+      x: (e.clientX - rect.left) / rect.width,
+      y: (e.clientY - rect.top) / rect.height,
+    });
+  }, []);
 
   const goToSlide = useCallback((index) => {
     if (index === activeIndex || transitioning) return;
@@ -91,13 +103,21 @@ function Home() {
     <div className="home">
       {/* HERO CAROUSEL */}
       <section
+        ref={heroRef}
         className={`hero hero--${book.id}${transitioning ? ' hero--fade' : ''}`}
-        style={{
-          background: book.bgGradient,
-          '--accent': book.accentColor,
-          '--accent-glow': book.accentGlow,
-        }}
+        style={{ '--accent': book.accentColor, '--accent-glow': book.accentGlow }}
+        onMouseMove={handleMouseMove}
       >
+        {/* Ghosted parallax book cover background */}
+        <div
+          className="hero-bg-cover"
+          style={{
+            backgroundImage: `url(${book.coverSrc})`,
+            transform: `translate(${(mousePos.x - 0.5) * -18}px, ${(mousePos.y - 0.5) * -12}px) scale(1.08)`,
+          }}
+        />
+        {/* Atmospheric overlay */}
+        <div className={`hero-bg-overlay hero-bg-overlay--${book.id}`} />
         <div
           className="hero-radial"
           style={{ backgroundImage: book.radialGlow }}
@@ -105,8 +125,6 @@ function Home() {
 
         <div className="hero-content">
           <div className="hero-text">
-            <img src={LOGO_URL} alt="Alt Tales Logo" className="hero-logo" />
-
             <span className="hero-genre-badge" style={{ borderColor: book.accentColor, color: book.accentColor }}>
               {book.genre}
             </span>

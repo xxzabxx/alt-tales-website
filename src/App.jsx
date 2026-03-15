@@ -15,7 +15,13 @@ function App() {
       <div className="app">
         <nav className="navbar">
           <div className="nav-container">
-            <Link to="/" className="logo">Alt Tales</Link>
+            <Link to="/" className="logo">
+              <img
+                src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026701779/wGgrpBOKZUgnkwRw.png"
+                alt="Alt Tales"
+                className="nav-logo-img"
+              />
+            </Link>
             <div className="nav-links">
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
