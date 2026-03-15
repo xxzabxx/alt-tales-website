@@ -109,13 +109,18 @@ function Home() {
         onMouseMove={handleMouseMove}
       >
         {/* Ghosted parallax book cover background */}
-        <div
-          className="hero-bg-cover"
-          style={{
-            backgroundImage: `url(${book.coverSrc})`,
-            transform: `translate(${(mousePos.x - 0.5) * -18}px, ${(mousePos.y - 0.5) * -12}px) scale(1.08)`,
-          }}
-        />
+        <div className="hero-bg-cover-wrap">
+          <img
+            key={book.id}
+            src={book.coverSrc}
+            alt=""
+            aria-hidden="true"
+            className="hero-bg-cover"
+            style={{
+              transform: `translate(${(mousePos.x - 0.5) * -22}px, ${(mousePos.y - 0.5) * -14}px) scale(1.1)`,
+            }}
+          />
+        </div>
         {/* Atmospheric overlay */}
         <div className={`hero-bg-overlay hero-bg-overlay--${book.id}`} />
         <div

@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import Home from './pages/Home';
 import About from './pages/About';
 import Series from './pages/Series';
@@ -10,16 +11,24 @@ import ThankYouGrimm from './pages/ThankYouGrimm';
 import './App.css';
 
 function App() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <BrowserRouter>
       <div className="app">
-        <nav className="navbar">
+        <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
           <div className="nav-container">
             <Link to="/" className="logo">
               <img
                 src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663026701779/wGgrpBOKZUgnkwRw.png"
                 alt="Alt Tales"
-                className="nav-logo-img"
+                className={`nav-logo-img${scrolled ? ' nav-logo-img--small' : ''}`}
               />
             </Link>
             <div className="nav-links">

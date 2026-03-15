@@ -63,6 +63,11 @@ h1, h2, h3, h4 {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(16, 185, 129, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.navbar--scrolled {
+  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(16, 185, 129, 0.08);
 }
 
 .nav-container {
@@ -72,7 +77,12 @@ h1, h2, h3, h4 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 80px;
+  transition: height 0.35s ease;
+}
+
+.navbar--scrolled .nav-container {
+  height: 56px;
 }
 
 .logo {
@@ -88,10 +98,16 @@ h1, h2, h3, h4 {
 }
 
 .nav-logo-img {
-  height: 44px;
+  height: 68px;
   width: auto;
   display: block;
-  filter: drop-shadow(0 0 10px rgba(16, 185, 129, 0.2));
+  filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.25));
+  transition: height 0.35s ease, filter 0.3s ease;
+}
+
+.nav-logo-img--small {
+  height: 40px;
+  filter: drop-shadow(0 0 8px rgba(16, 185, 129, 0.15));
 }
 
 .nav-links {
